@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetables - Healthy Food Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Vegetables and Their Health Benefits</h1>
+
+  <!-- 🔍 Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search for a vegetable...">
+  </div>
+
+  <div class="veg-container">
+
+    <!-- 🌱 Your Original Vegetable Items -->
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Asparagus.png" alt="Asparagus">
+      <h3>Asparagus</h3>
+      <p>Good for digestion and rich in folate</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-11-09 223705.png" alt="bottle gourd">
+      <h3>bottle gourd</h3>
+      <p>aiding hydration, promoting weight loss, and supporting heart and digestive health.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Bro.png" alt="Broccoli">
+      <h3>Broccoli</h3>
+      <p>High in fiber, helps prevent cancer.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Carrot.png" alt="carrot">
+      <h3>Carrot</h3>
+      <p>Improves eyesight and skin health.</p>
+    </div>
+
+    <script>
+      // Search functionality
+      const searchBox = document.getElementById('searchBox');
+
+      searchBox.addEventListener('keyup', function() {
+        const searchText = this.value.toLowerCase();
+        const items = document.querySelectorAll('.veg-item');
+        let found = false;
+
+        items.forEach(item => {
+          const name = item.querySelector('h3').textContent.toLowerCase();
+          if (name.includes(searchText)) {
+            item.style.display = 'block';
+            found = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        const noResult = document.getElementById('noResult');
+        if (!found && searchText !== '') {
+          noResult.style.display = 'block';
+        } else {
+          noResult.style.display = 'none';
+        }
+      });
+    </script>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\d.png" alt="Drumstick (Moringa)">
+      <h3>Drumstick (Moringa)</h3>
+      <p>Boosts immunity and strengthens bones.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\e.png" alt="Eggplant (Brinjal)">
+      <h3>Eggplant (Brinjal)</h3>
+      <p>Lowers cholesterol and helps control weight.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 191125.png" alt="Garlic">
+      <h3>Garlic</h3>
+      <p>Helps in blood pressure control..</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-11-09 223142.png" alt="Ginger">
+      <h3>Ginger</h3>
+      <p>easing nausea and indigestion, reducing inflammation and pain from conditions like arthritis, and improving digestion and blood sugar levels.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 191531.png" alt="Indian Spinach (Palak)">
+      <h3>Indian Spinach (Palak)</h3>
+      <p>Good source of iron and calcium.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 191729.png" alt="Kale">
+      <h3>Kale</h3>
+      <p>High in antioxidants and Vitamin K.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 191854.png" alt="Lettuce">
+      <h3>Lettuce</h3>
+      <p>Helps in hydration and digestion.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 192119.png" alt="Napa Cabbage">
+      <h3>Napa Cabbage</h3>
+      <p>Boosts metabolism and immunity.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 192204.png" alt="Okra (Lady Finger)">
+      <h3>Okra (Lady Finger)</h3>
+      <p>Good for blood sugar and digestion.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 192253.png" alt="Potato">
+      <h3>Potato</h3>
+      <p>Provides instant energy, rich in carbs.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 225851.png" alt="Radish">
+      <h3>Radish</h3>
+      <p>Detoxifies liver and helps digestion..</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\tomato.png" alt="Tomato">
+      <h3>Tomato</h3>
+      <p>High in Vitamin C and antioxidants..</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 192447.png" alt="Val Beans (Hyacinth beans)">
+      <h3>Val Beans (Hyacinth beans)</h3>
+      <p>Good for heart and rich in fiber</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 192540.png" alt="Water Spinach (Kangkong)">
+      <h3>Water Spinach (Kangkong)</h3>
+      <p>Improves blood circulationr</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-19 192646.png" alt="Xanthosoma (Taro root)">
+      <h3>Xanthosoma (Taro root)</h3>
+      <p>Good for heart and rich in fiber</p>
+    </div>
+
+    <!-- 🆕 15 New Vegetables Added Below -->
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Bitter Gourd.png" alt="Bitter Gourd">
+      <h3>Bitter Gourd</h3>
+      <p>Helps regulate blood sugar levels and purifies blood.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Beetroot.png" alt="Beetroot">
+      <h3>Beetroot</h3>
+      <p>Boosts stamina and supports liver detoxification.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221453.png" alt="Cabbage">
+      <h3>Cabbage</h3>
+      <p>Improves digestion and strengthens immunity.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221405.png" alt="Capsicum">
+      <h3>Capsicum (Bell Pepper)</h3>
+      <p>Rich in Vitamin C and antioxidants for glowing skin.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221244.png" alt="Cauliflower">
+      <h3>Cauliflower</h3>
+      <p>Supports heart health and aids in digestion.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221550.png" alt="Celery">
+      <h3>Celery</h3>
+      <p>Good for hydration and reduces inflammation.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221638.png" alt="Corn">
+      <h3>Corn</h3>
+      <p>Provides energy and supports eye health.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221814.png" alt="Cucumber">
+      <h3>Cucumber</h3>
+      <p>Keeps the body cool and supports hydration.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221854.png" alt="Green Peas">
+      <h3>Green Peas</h3>
+      <p>Rich in plant protein and helps in muscle growth.</p>
+    </div>
+
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 221948.png" alt="Pumpkin">
+      <h3>Pumpkin</h3>
+      <p>Rich in Vitamin A and good for eye health.</p>
+    </div>
+
+     <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\vegetables\Screenshot 2025-10-31 222144.png" alt="Onion">
+      <h3>Onion</h3>
+      <p>Supports heart health and boosts immunity.</p>
+    </div>
+
+    <p id="noResult" style="display:none; text-align:center; font-size:18px; color:red;">
+      ❌ No results found. Try another vegetable.
+    </p>
+
+  </div>
+
+  <a href="./index.html" class="back-btn">← Back to Home</a>
+
+</body>
+</html>

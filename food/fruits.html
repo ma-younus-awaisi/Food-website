@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Fruits Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
+      min-height: 100vh;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff6b6b, #ff9a9e);
+      color: white;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .search-container {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    input[type="text"] {
+      width: 50%;
+      padding: 12px;
+      border-radius: 25px;
+      border: 2px solid #ff4c4c;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #ff9a9e;
+      box-shadow: 0 0 10px rgba(255, 105, 105, 0.5);
+    }
+
+    .fruit-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .fruit-card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      width: 220px;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .fruit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .fruit-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .fruit-info {
+      padding: 10px;
+    }
+
+    .fruit-info h3 {
+      margin: 8px 0;
+      color: #ff4c4c;
+    }
+
+    .fruit-info p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #ff6b6b, #ff9a9e);
+      color: white;
+      padding: 15px 0;
+      font-size: 1rem;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      input[type="text"] {
+        width: 80%;
+      }
+
+      .fruit-card {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🍎 Fruits and their Benefits🍇</header>
+
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search for a fruit...">
+  </div>
+
+ <div class="fruit-container" id="fruitContainer">
+
+  <!-- Fruits List in Alphabetical Order -->
+  <div class="fruit-card" data-name="apple">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 183831.png" alt="Apple">
+    <div class="fruit-info">
+      <h3>Apple</h3>
+      <p>Rich in fiber and vitamin C.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="apricot">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 183942.png" alt="Apricot">
+    <div class="fruit-info">
+      <h3>Apricot</h3>
+      <p>Supports skin and eye health.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="banana">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184115.png" alt="Banana">
+    <div class="fruit-info">
+      <h3>Banana</h3>
+      <p>Energy booster with potassium.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="blackberry">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184210.png" alt="Blackberry">
+    <div class="fruit-info">
+      <h3>Blackberry</h3>
+      <p>High in antioxidants and fiber.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="blueberry">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184315.png" alt="Blueberry">
+    <div class="fruit-info">
+      <h3>Blueberry</h3>
+      <p>Small fruit with big antioxidants.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="cherry">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184441.png" alt="Cherry">
+    <div class="fruit-info">
+      <h3>Cherry</h3>
+      <p>Sweet red fruit with antioxidants.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="coconut">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184533.png" alt="Coconut">
+    <div class="fruit-info">
+      <h3>Coconut</h3>
+      <p>Provides refreshing water and oil.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="cranberry">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184625.png" alt="Cranberry">
+    <div class="fruit-info">
+      <h3>Cranberry</h3>
+      <p>Helps prevent urinary tract infections.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="custardapple">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184752.png" alt="Custard Apple">
+    <div class="fruit-info">
+      <h3>Custard Apple</h3>
+      <p>Sweet creamy fruit rich in vitamins.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="dates">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 184838.png" alt="Dates">
+    <div class="fruit-info">
+      <h3>Dates</h3>
+      <p>Provides natural sugar and energy.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="dragonfruit">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185027.png" alt="Dragon Fruit">
+    <div class="fruit-info">
+      <h3>Dragon Fruit</h3>
+      <p>Exotic fruit rich in fiber.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="fig">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185258.png" alt="Fig">
+    <div class="fruit-info">
+      <h3>Fig</h3>
+      <p>Rich in fiber and promotes digestion.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="grapes">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185347.png" alt="Grapes">
+    <div class="fruit-info">
+      <h3>Grapes</h3>
+      <p>Juicy and full of antioxidants.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="guava">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185448.png" alt="Guava">
+    <div class="fruit-info">
+      <h3>Guava</h3>
+      <p>Boosts immunity and helps digestion.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="jackfruit">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185542.png" alt="Jackfruit">
+    <div class="fruit-info">
+      <h3>Jackfruit</h3>
+      <p>Huge fruit rich in Vitamin A & C.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="kiwi">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185618.png" alt="Kiwi">
+    <div class="fruit-info">
+      <h3>Kiwi</h3>
+      <p>Tangy taste packed with nutrients.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="lychee">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185700.png" alt="Lychee">
+    <div class="fruit-info">
+      <h3>Lychee</h3>
+      <p>Sweet tropical fruit rich in vitamin C.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="mango">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185802.png" alt="Mango">
+    <div class="fruit-info">
+      <h3>Mango</h3>
+      <p>The king of fruits, full of vitamins.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="mangosteen">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 185922.png" alt="Mangosteen">
+    <div class="fruit-info">
+      <h3>Mangosteen</h3>
+      <p>Queen of fruits, full of antioxidants.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="mulberry">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190052.png" alt="Mulberry">
+    <div class="fruit-info">
+      <h3>Mulberry</h3>
+      <p>Improves blood circulation and immunity.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="orange">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190134.png" alt="Orange">
+    <div class="fruit-info">
+      <h3>Orange</h3>
+      <p>Boosts immunity with Vitamin C.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="papaya">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190216.png" alt="Papaya">
+    <div class="fruit-info">
+      <h3>Papaya</h3>
+      <p>Good for digestion and skin health.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="passionfruit">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190327.png" alt="Passion Fruit">
+    <div class="fruit-info">
+      <h3>Passion Fruit</h3>
+      <p>Sweet-sour fruit rich in fiber.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="pear">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190407.png" alt="Pear">
+    <div class="fruit-info">
+      <h3>Pear</h3>
+      <p>Soft, sweet, and full of fiber.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="persimmon">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190524.png" alt="Persimmon">
+    <div class="fruit-info">
+      <h3>Persimmon</h3>
+      <p>Rich in vitamins and antioxidants.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="pineapple">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190621.png" alt="Pineapple">
+    <div class="fruit-info">
+      <h3>Pineapple</h3>
+      <p>Rich in vitamin C and bromelain enzyme.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="plum">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190721.png" alt="Plum">
+    <div class="fruit-info">
+      <h3>Plum</h3>
+      <p>Good for digestion and bone health.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="pomegranate">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190829.png" alt="Pomegranate">
+    <div class="fruit-info">
+      <h3>Pomegranate</h3>
+      <p>Boosts blood health and energy.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="raspberry">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 190945.png" alt="Raspberry">
+    <div class="fruit-info">
+      <h3>Raspberry</h3>
+      <p>Rich in vitamin C and manganese.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="sapota">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 191052.png" alt="Sapota (Chikoo)">
+    <div class="fruit-info">
+      <h3>Sapota (Chikoo)</h3>
+      <p>Sweet fruit good for digestion and skin.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="starfruit">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 191217.png" alt="Star Fruit">
+    <div class="fruit-info">
+      <h3>Star Fruit</h3>
+      <p>Tropical fruit rich in vitamin C.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="strawberry">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 191259.png" alt="Strawberry">
+    <div class="fruit-info">
+      <h3>Strawberry</h3>
+      <p>Sweet, juicy, and vitamin-rich.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="tamarind">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 191410.png" alt="Tamarind">
+    <div class="fruit-info">
+      <h3>Tamarind</h3>
+      <p>Used for tangy flavor and digestion.</p>
+    </div>
+  </div>
+
+  <div class="fruit-card" data-name="watermelon">
+    <img src="C:\Users\DELL\OneDrive\Desktop\foods\fruits\Screenshot 2025-11-08 191605.png" alt="Watermelon">
+    <div class="fruit-info">
+      <h3>Watermelon</h3>
+      <p>Hydrating and refreshing fruit.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+  <script>
+    // 🔍 Fruit Search Functionality
+    const searchBox = document.getElementById("searchBox");
+    const fruits = document.querySelectorAll(".fruit-card");
+
+    searchBox.addEventListener("keyup", function () {
+      const searchText = this.value.toLowerCase();
+      fruits.forEach(fruit => {
+        const name = fruit.dataset.name.toLowerCase();
+        fruit.style.display = name.includes(searchText) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

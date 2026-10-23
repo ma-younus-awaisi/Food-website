@@ -1,0 +1,285 @@
+/* Page background */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf2;       /* light theme */
+  color: #333;
+}
+
+/* Simple heading */
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 40px;
+  color: #2e7d32;
+}
+
+/* Image row layout */
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* Food Card */
+.food-card {
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.food-card img,
+.food-image {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* Name on image */
+.food-name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 4px 9px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* Category names under images */
+.vegetables-name,
+.fruits-name,
+.Non-Veg-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #388e3c;
+}
+
+/* Veg container list */
+.veg-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px;
+}
+
+.veg-item {
+  width: 250px;
+  text-align: center;
+  background-color: #f1f8e9;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.veg-item:hover {
+  transform: scale(1.05);
+}
+
+.veg-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.veg-item h3 {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #388e3c;
+}
+
+.veg-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Back button */
+.back-btn {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  text-decoration: none;
+  color: white;
+  background-color: #388e3c;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.back-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Search bar */
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#searchBox {
+  width: 50%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchBox:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px #4CAF50;
+}
+
+/* Header */
+header {
+  background: #ff6f61;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Side Menu */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.side-menu a {
+  display: block;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.side-menu a:hover {
+  background-color: #575757;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about {
+  background-color: #fff3e0;
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e84c3d;
+}
+
+/* Desktop Image Size */
+.food-card img,
+.food-image {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Desktop: Name under images */
+.vegetables-name,
+.fruits-name,
+.Non-Veg-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #388e3c;
+}
+
+/* Name on image overlay */
+.food-name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+  /* Bigger images for mobile too */
+  .food-card img,
+  .food-image {
+    width: 250px;
+    border-radius: 15px;
+  }
+
+  /* Overlay text size on mobile */
+  .food-name {
+    font-size: 18px;
+    padding: 4px 8px;
+  }
+
+  /* Category names under images */
+  .vegetables-name,
+  .fruits-name,
+  .Non-Veg-name {
+    font-size: 20px;
+  }
+
+  /* Heading size */
+  h1 {
+    font-size: 32px;
+  }
+}

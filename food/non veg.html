@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non Veg - Healthy Food Guide</title>
+  <link rel="stylesheet" href="non veg.css">
+</head>
+<body>
+
+  <h1>Non Veg and Their Health Benefits</h1>
+
+  <!-- 🔍 Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search for a non-veg item...">
+  </div>
+
+  <div class="veg-container" id="nonvegList">
+
+    <!-- 🐔 Hen -->
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\Non veg\Gemini_Generated_Image_63ppd863ppd863pp.png" alt="Hen">
+      <h3>Hen</h3>
+      <p>
+        Excellent source of protein.  
+        Builds muscles, improves immunity, and supports body growth.
+      </p>
+    </div>
+
+    <!-- 🐟 Fish -->
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\Non veg\Screenshot 2025-11-08 195705.png" alt="Fish">
+      <h3>Fish</h3>
+      <p>
+        Rich in omega-3 fatty acids.  
+        Good for heart, brain, memory, and vision.
+      </p>
+    </div>
+
+    <!-- 🐄 Cow Meat -->
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\Non veg\Gemini_Generated_Image_o55twbo55twbo55t.png" alt="Cow Meat">
+      <h3>Cow Meat</h3>
+      <p>
+        High in iron and vitamin B12.  
+        Boosts energy and supports red blood cell production.
+      </p>
+    </div>
+
+    <!-- 🐐 Goat Meat -->
+    <div class="veg-item">
+      <img src="C:\Users\DELL\OneDrive\Desktop\foods\Non veg\Gemini_Generated_Image_dsn1e1dsn1e1dsn1.png" alt="Goat Meat">
+      <h3>Goat Meat</h3>
+      <p>
+        Low in cholesterol and rich in protein.  
+        Supports heart health and strengthens bones.
+      </p>
+    </div>
+
+    <!-- ❌ No Result Message -->
+    <p id="noResult" style="display:none; text-align:center; font-size:18px; color:red;">
+      ❌ No results found. Try another non-veg item.
+    </p>
+
+  </div>
+
+  <!-- 🔙 Back Button -->
+  <a href="./index.html" class="back-btn">← Back to Home</a>
+
+  <!-- 🔎 Search Script -->
+  <script>
+    const searchBox = document.getElementById('searchBox');
+
+    searchBox.addEventListener('keyup', function() {
+      const searchText = this.value.toLowerCase();
+      const items = document.querySelectorAll('.veg-item');
+      let found = false;
+
+      items.forEach(item => {
+        const name = item.querySelector('h3').textContent.toLowerCase();
+        if (name.includes(searchText)) {
+          item.style.display = 'block';
+          found = true;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      const noResult = document.getElementById('noResult');
+      if (!found && searchText !== '') {
+        noResult.style.display = 'block';
+      } else {
+        noResult.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
